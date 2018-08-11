@@ -15,9 +15,9 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw2.R;
 
 public class Practice08XfermodeView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Bitmap bitmap1;
-    Bitmap bitmap2;
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Bitmap bitmap1;
+    private Bitmap bitmap2;
 
     public Practice08XfermodeView(Context context) {
         super(context);

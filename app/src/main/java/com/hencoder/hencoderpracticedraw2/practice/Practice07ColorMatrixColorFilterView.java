@@ -15,8 +15,8 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw2.R;
 
 public class Practice07ColorMatrixColorFilterView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Bitmap bitmap;
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Bitmap bitmap;
 
     public Practice07ColorMatrixColorFilterView(Context context) {
         super(context);

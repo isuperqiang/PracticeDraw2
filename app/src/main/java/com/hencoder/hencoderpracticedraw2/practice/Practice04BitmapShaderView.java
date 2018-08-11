@@ -14,7 +14,7 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw2.R;
 
 public class Practice04BitmapShaderView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice04BitmapShaderView(Context context) {
         super(context);

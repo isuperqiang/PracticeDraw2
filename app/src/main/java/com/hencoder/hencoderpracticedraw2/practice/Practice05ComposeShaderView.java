@@ -16,7 +16,7 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw2.R;
 
 public class Practice05ComposeShaderView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice05ComposeShaderView(Context context) {
         super(context);
@@ -41,7 +41,7 @@ public class Practice05ComposeShaderView extends View {
         Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.batman_logo);
         Shader shader1 = new BitmapShader(bitmap1, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
         Shader shader2 = new BitmapShader(bitmap2, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
-        Shader shader = new ComposeShader(shader1, shader2, PorterDuff.Mode.DST_IN);
+        Shader shader = new ComposeShader(shader1, shader2, PorterDuff.Mode.DST_OUT);
         paint.setShader(shader);
     }
 

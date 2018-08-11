@@ -14,8 +14,10 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw2.R;
 
 public class Practice06LightingColorFilterView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Bitmap bitmap;
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Bitmap bitmap;
+    private ColorFilter mRedColorFilter;
+    private ColorFilter mGreenColorFilter;
 
     public Practice06LightingColorFilterView(Context context) {
         super(context);
@@ -31,6 +33,10 @@ public class Practice06LightingColorFilterView extends View {
 
     {
         bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.batman);
+        // 第一个 LightingColorFilter：去掉红色部分
+        mRedColorFilter = new LightingColorFilter(0x00ffff, 0);
+        // 第二个 LightingColorFilter：增强绿色部分
+        mGreenColorFilter = new LightingColorFilter(0xffffff, 0x006000);
     }
 
     @Override
@@ -39,14 +45,10 @@ public class Practice06LightingColorFilterView extends View {
 
         // 使用 Paint.setColorFilter() 来设置 LightingColorFilter
 
-        // 第一个 LightingColorFilter：去掉红色部分
-        ColorFilter r = new LightingColorFilter(0x00ffff, 0);
-        paint.setColorFilter(r);
+        paint.setColorFilter(mRedColorFilter);
         canvas.drawBitmap(bitmap, 0, 0, paint);
 
-        // 第二个 LightingColorFilter：增强绿色部分
-        ColorFilter g = new LightingColorFilter(0xffffff, 0x004000);
-        paint.setColorFilter(g);
+        paint.setColorFilter(mGreenColorFilter);
         canvas.drawBitmap(bitmap, bitmap.getWidth() + 100, 0, paint);
     }
 }

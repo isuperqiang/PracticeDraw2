@@ -9,8 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice10StrokeJoinView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Path path = new Path();
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Path path = new Path();
 
     public Practice10StrokeJoinView(Context context) {
         super(context);

@@ -7,7 +7,6 @@ import android.graphics.BlurMaskFilter;
 import android.graphics.Canvas;
 import android.graphics.MaskFilter;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -15,8 +14,8 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw2.R;
 
 public class Practice14MaskFilterView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Bitmap bitmap;
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Bitmap bitmap;
 
     public Practice14MaskFilterView(Context context) {
         super(context);

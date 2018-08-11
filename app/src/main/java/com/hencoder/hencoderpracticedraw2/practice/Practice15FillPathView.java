@@ -9,12 +9,12 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice15FillPathView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Paint pathPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Path path = new Path();
-    Path path1 = new Path();
-    Path path2 = new Path();
-    Path path3 = new Path();
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Paint pathPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Path path = new Path();
+    private Path path1 = new Path();
+    private Path path2 = new Path();
+    private Path path3 = new Path();
 
     public Practice15FillPathView(Context context) {
         super(context);

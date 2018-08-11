@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice13ShadowLayerView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice13ShadowLayerView(Context context) {
         super(context);
